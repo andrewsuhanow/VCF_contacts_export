@@ -2,16 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a47d332-dc98-4c89-8df4-500372b839d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/CardEdit.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/Hello.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/FirstPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/FirstPageCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/FirstPageCardEdit.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/LoadFilePage.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/LoadFilePageCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/LoadFilePageCardEdit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/MainPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/StoredPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/StoredPageCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/TestComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_21_162416_create_data_cards_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_21_162416_create_data_cards_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/frontend" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/frontend/src/components/HelloWorld.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +180,14 @@
       <workItem from="1588079354917" duration="3305000" />
       <workItem from="1588158389048" duration="7642000" />
       <workItem from="1588236880140" duration="3546000" />
-      <workItem from="1588325999743" duration="921000" />
+      <workItem from="1588325999743" duration="12587000" />
+      <workItem from="1588497059788" duration="5383000" />
+      <workItem from="1588503890632" duration="13605000" />
+      <workItem from="1588521041223" duration="1692000" />
+      <workItem from="1588580762173" duration="2666000" />
+      <workItem from="1588841114459" duration="15908000" />
+      <workItem from="1588883049349" duration="2398000" />
+      <workItem from="1590053818814" duration="21035000" />
     </task>
     <servers />
   </component>
@@ -180,9 +199,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="70" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1587131714708" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1587735571589">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588341558621">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587735571589" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588341558621" />
+    <state x="407" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588859620518">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="407" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1588859620518" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1588841475409">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1588841475409" />
   </component>
 </project>

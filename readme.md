@@ -1,3 +1,12 @@
+
+apache_2.4-php_7.0-7.1-x64
+php_7.1-x64
+MySql-8.0-x64
+node --version     10.7.0
+
+
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">

@@ -14,12 +14,15 @@ class CreateDataCardsTable extends Migration
     public function up()
     {
         Schema::create('data_cards', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
 
             $table->string('name');
             $table->string('telephone');
             $table->string('email');
+            $table->integer('is_time');
+
+
+            $table->bigIncrements('id');
+            $table->timestamps();
         });
     }
 

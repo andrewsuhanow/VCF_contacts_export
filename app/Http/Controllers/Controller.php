@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 use Illuminate\Http\Request;
 use App\Models\DataCards;
+use App\Models\deletedDataCards;
 
 class Controller extends BaseController
 {
@@ -119,25 +120,196 @@ class Controller extends BaseController
     }
 
 
-
-
-    public function saveInformList(Request $request)
+    // обновление временных данных в БД (вызываем при кнопке редактировать)
+    public function UpdateCard(Request $request)
     {
 
+        $CardId = DataCards::find($request->card['ID']);
+
+        $CardId->name = $request->card['FN'];
+        $CardId->telephone = $request->card['TEL'];
+        $CardId->email = $request->card['EMAIL'];
+        $CardId->save();
+
+        return response()->json([
+            'status' => 'success1 -----UpdateCard',
+        ]);
+    }
+
+    // добавление новой карты
+  public function addMewCard(Request $request)
+    {
+
+        $newCard = new DataCards();
+        $newCard->name = $request->newCard['FN'];
+        $newCard->telephone = $request->newCard['TEL'];
+        $newCard->email = $request->newCard['EMAIL'];
+        $newCard->is_time = 0;
+        $newCard->save();
+
+        return response()->json([
+            'status' => 'success---addMewCard',
+            //'aaa' => $request->newCard['FN'],
+        ]);
+    }
+
+    // узнаем ID нужной нам карты
+//    public function findCardIdByOtherData(Request $request)
+//    {
+//
+//        $Cards = DataCards::where('name', $request->newCard['FN'])->get();
+//
+//        return response()->json([
+//            'status' => 'success1---findCardIdByOtherData',
+//            'Card' => $Cards,
+//        ]);
+//    }
+
+    // удаление временных данных из БД (вызываем при переходе на страницу загрузки файла)
+    public function DeleteTimeData(Request $request)
+    {
+
+        $DataCards = DataCards::where('is_time', -1)->get();
+
+        for($i = 0; $i < count($DataCards); $i++){
+            $DataCards[$i]->delete();
+        }
+
+        return response()->json([
+            'status' => 'success1 -----DeleteTimeData',
+            //'fileData' => $request->fileData[0]['FN'],
+        ]);
+    }
+
+    // удалить одну карту их базы данных
+    public function DeleteCard(Request $request)
+    {
+
+        $CardId = DataCards::find($request->id);
+        $CardId->delete();
 
 
+        return response()->json([
+            'status' => 'success1 -----DeleteCard _1_',
+            //'card' => $CardId,
+
+        ]);
+    }
+
+ // удалить одну карту из базы данных и добавить в ее в архивную базу
+    public function DeleteCardAndAddToStore(Request $request)
+    {
+
+        $CardId = DataCards::find($request->id);
+
+
+
+        $newInDeleted = new deletedDataCards();
+        $newInDeleted->name = $CardId->name;
+        $newInDeleted->telephone = $CardId->telephone;
+        $newInDeleted->email = $CardId->email;
+        $newInDeleted->save();
+
+        $CardId->delete();
+
+
+        return response()->json([
+            'status' => 'success1---DeleteCardAndAddToStore',
+            //'card' => $CardId->name,
+
+        ]);
+    }
+
+    public function saveTimeData(Request $request)
+    {
         for($i=0; $i< count($request->fileData); $i++)
         {
             $new = new DataCards();
             $new->name = $request->fileData[$i]['FN'];
             $new->telephone = $request->fileData[$i]['TEL'];
             $new->email = $request->fileData[$i]['EMAIL'];
+            $new->is_time = -1;
             $new->save();
         }
 
         return response()->json([
-            'status' => 'success1',
+            'status' => 'success1 ----saveTimeData',
             //'fileData' => $request->fileData[0]['FN'],
+        ]);
+    }
+
+    public function saveDataFromTimeData(Request $request)
+    {
+
+        $DataCards = DataCards::where('is_time', -1)->get();
+
+        for($i = 0; $i < count($DataCards); $i++){
+
+            $DataCards[$i]->is_time = 0;
+            $DataCards[$i]->save();
+        }
+
+//        for($i=0; $i< count($request->fileData); $i++)
+//        {
+//            $new = new DataCards();
+//            $new->name = $request->fileData[$i]['FN'];
+//            $new->telephone = $request->fileData[$i]['TEL'];
+//            $new->email = $request->fileData[$i]['EMAIL'];
+//            $new->is_time = ;
+//            $new->save();
+//        }
+
+        return response()->json([
+            'status' => 'success1 ----saveDataFromTimeData',
+            //'fileData' => $request->fileData[0]['FN'],
+        ]);
+    }
+
+
+    public function loadDataFromBD(Request $request)
+    {
+
+        $DataCards = DataCards::where('is_time', $request->isTime)->get();
+
+        return response()->json([
+            'status' => 'success---loadTimeDataFromBD ',
+            'DataCards' => $DataCards,
+        ]);
+    }
+
+    // загрузить данные из базы 'deletedDataCards'
+    public function loadDataFromStoreBD(Request $request)
+    {
+
+        $DataCards = deletedDataCards::get();
+
+        return response()->json([
+            'status' => 'success---loadDataFromStoreBD ',
+            'DataCards' => $DataCards,
+        ]);
+    }
+
+    // восстановить карту -> переместить из 'deletedDataCards' в 'DataCards' с индексом '0'
+    public function restoreCard(Request $request)
+    {
+
+        $Card = deletedDataCards::where('id', $request->id)->get();
+
+
+        $new = new DataCards();
+        $new->name = $Card[0]->name;
+        $new->telephone = $Card[0]->telephone;
+        $new->email = $Card[0]->email;
+        $new->is_time = 0;
+        $new->save();
+
+
+        $Card[0]->delete();
+
+
+        return response()->json([
+            'status' => 'success---restoreCard',
+            //'Card' => $Card[0]->name,
         ]);
     }
 
