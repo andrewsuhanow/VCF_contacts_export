@@ -1,9 +1,11 @@
+/resources/frontend/node_modules
+\resources\frontend\node_modules
 /node_modules
 /public/hot
 /public/storage
 /storage/*.key
 /vendor
-/resources/frontendà/node_modules
+
 .env
 .env.backup
 .phpunit.result.cache
@@ -11,6 +13,10 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+
+
+
 
 
 
