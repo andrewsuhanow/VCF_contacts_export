@@ -3,6 +3,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/resources/frontendà/node_modules
 .env
 .env.backup
 .phpunit.result.cache
@@ -12,4 +13,4 @@ npm-debug.log
 yarn-error.log
 
 
-/resources/frontend/node_modules
+
