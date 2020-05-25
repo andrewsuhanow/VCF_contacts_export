@@ -12,10 +12,6 @@
       <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/StoredPage.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/StoredPageCard.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/frontend/src/components/TestComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_21_162416_create_data_cards_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_21_162416_create_data_cards_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/frontend" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/package.json" afterDir="false" />
@@ -23,7 +19,6 @@
       <change beforePath="$PROJECT_DIR$/resources/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/frontend/src/components/HelloWorld.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,6 +183,7 @@
       <workItem from="1588841114459" duration="15908000" />
       <workItem from="1588883049349" duration="2398000" />
       <workItem from="1590053818814" duration="21035000" />
+      <workItem from="1590338989371" duration="298000" />
     </task>
     <servers />
   </component>
